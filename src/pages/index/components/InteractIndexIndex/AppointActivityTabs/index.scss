@@ -1,0 +1,58 @@
+@import "@/assets/css/mixin.scss";
+
+.appoint-activity {
+  .appoint-item {
+    margin-bottom: 20px;
+    background: #ededed;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px #e4e4e4;
+    width: 48%;
+    flex: 0 0 48%;
+    &:nth-child(odd) {
+      margin-right: 4%;
+    }
+    .top {
+      position: relative;
+      image {
+        width: 100%;
+        height: 276px;
+      }
+      .at-tag {
+        position: absolute;
+        top: 34px;
+        left: 30px;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 10px;
+        background-color: rgba(0, 0, 0, 0.3);
+        min-width: 120px;
+        text-align: left;
+        border: none;
+        @include font-style(16px, #fff);
+      }
+    }
+    .title {
+      margin: 10px 30px;
+      line-height: 34px;
+      @include font-style(24px, #000);
+      min-height: 85px;
+    }
+    .bottom {
+      padding: 0 30px 30px;
+      display: flex;
+      .at-button {
+        width: 144px;
+        height: 50px;
+        line-height: 50px;
+        background: rgba(0, 0, 0, 0.5);
+        border: none;
+        @include font-style(24px, #fff);
+      }
+      .text {
+        flex: auto;
+        @include flex-center(row, flex-end, center);
+        @include font-style(20px, #229e8e);
+      }
+    }
+  }
+}

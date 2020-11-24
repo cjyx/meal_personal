@@ -1,0 +1,464 @@
+@import "@/assets/css/mixin.scss";
+page {
+  background-color: #f5f5f5;
+}
+
+.sign-up_index,
+.sign-up-order_index {
+  padding-bottom: 100px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.sign-up_index {
+  .banner-swiper {
+    height: 560px;
+
+    .img-box {
+      height: 600px;
+
+      .image {
+        width: 100%;
+        height: 560px;
+      }
+    }
+  }
+
+  .caption {
+    margin-bottom: 20px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+
+    .title {
+      margin-bottom: 4px;
+      @include font-style(32px, #000000, bold);
+    }
+
+    .desc {
+      @include font-style(24px, #000000);
+    }
+
+    .icon-box {
+      flex-shrink: 0;
+    }
+  }
+
+  .active-content {
+    .item {
+      margin-bottom: 54px;
+      @include font-style(28px, #434343);
+
+      .tit {
+        margin-bottom: 10px;
+      }
+
+      &.last {
+        margin-bottom: 0;
+      }
+    }
+
+    .icon-box {
+      margin-right: 10px;
+    }
+  }
+
+  .info {
+    position: relative;
+    padding: 0 10px 24px;
+    box-sizing: border-box;
+
+    .store-name {
+      margin-bottom: 2px;
+      @include font-style(24px, #000000);
+    }
+
+    .store-desc {
+      @include font-style(20px, #000000);
+    }
+
+    .store-distance {
+      margin-top: 8px;
+      @include font-style(20px, #434343);
+    }
+
+    .text {
+      padding: 0 8px;
+    }
+
+    .store-address {
+      margin-top: 4px;
+      @include font-style(24px, #434343);
+    }
+  }
+  .price {
+    margin: 30px 8px 0 5px;
+    @include font-style(20px, #848484);
+    @include flex-center(row, null, flex-end);
+    view {
+      margin: 0 10px;
+    }
+    .current {
+      @include font-style(28px, #ff3f81, bold);
+      text {
+        font-size: 20px;
+        font-weight: normal;
+      }
+    }
+    .original {
+      text-decoration: line-through;
+    }
+  }
+  .sign-up-container {
+    margin: 0 0 20px;
+    border-radius: 0;
+    box-shadow: initial;
+    background: #fff;
+  }
+  //适用店铺
+  .store-box {
+    .title {
+      @include font-style(28px, #434343, bold);
+    }
+    .store-caption {
+      padding: 20px 0;
+    }
+    .icon-group {
+      @include flex-center(column, null);
+      width: 60px;
+      view {
+        width: 50px;
+        height: 50px;
+        border-radius: 12px;
+        white-space: nowrap;
+
+        &.text {
+          padding: 10px 0;
+          width: initial;
+          height: initial;
+          border: none;
+          @include font-style(20px);
+        }
+      }
+    }
+  }
+  //商家推荐
+  .bussiness-box {
+    margin-bottom: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    .image-box {
+      background-color: #e3e3e3;
+      .image {
+        width: 100%;
+        height: 240px;
+        display: block;
+      }
+    }
+
+    .active-name {
+      padding: 8px 24px;
+      @include font-style(28px, #434343);
+    }
+
+    .text-box {
+      padding: 0 24px 10px;
+      box-sizing: border-box;
+      @include font-style(20px, #434343);
+      .info-box {
+        @include flex-center(row, null);
+        .price {
+          margin-top: 0;
+        }
+      }
+      .btn {
+        width: 100px;
+        .at-button {
+          height: 40px;
+          line-height: 38px;
+          @include font-style(20px, #ffffff);
+          background-color: #229e8e;
+          border-color: #229e8e;
+        }
+      }
+    }
+  }
+  //积分兑换
+  .activityCard-container {
+    .at-card__header .at-card__header-extra {
+      color: #848484;
+    }
+  }
+  //温馨提示
+  .tips-text-box {
+    line-height: 48px;
+    @include font-style(28px, #434343);
+  }
+}
+
+.sign-up_main-box {
+  margin-bottom: 20px;
+  padding: 20px 30px;
+  background-color: #ffffff;
+
+  .title {
+    padding-bottom: 15px;
+    @include font-style(32px, #000000, bold);
+
+    .more {
+      @include font-style(20px, #848484, bold);
+    }
+  }
+
+  .at-avatar {
+    width: 100%;
+    height: 100%;
+    line-height: initial;
+  }
+
+  .avatar-box {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    border: 2px solid #434343;
+    border-radius: 14px;
+    background-color: #ffffff;
+  }
+}
+
+.footer-pisition {
+  background-color: #fdd000;
+  @include font-style(32px, #434343, bold);
+  .box {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    padding-left: 30px;
+    @include flex-center(row, null, center);
+    .right {
+      @include flex-center(row, flex-end, null);
+      flex: auto;
+    }
+    .content-btn {
+      position: relative;
+      height: 110px;
+      @include flex-center(column);
+      image {
+        width: 260px;
+        height: 100%;
+      }
+      .desc {
+        @include font-style(20px, #fdd000);
+        @include flex-center(row, null);
+        line-height: 32px;
+        position: absolute;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.space {
+  padding-right: 16px;
+}
+
+.space2 {
+  padding-left: 16px;
+}
+
+.sign-up-order_index {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 64px;
+
+  .sign-up_main-box {
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+
+  .active-tit {
+    @include font-style(28px, #000000, bold);
+  }
+
+  .active-desc {
+    height: 120px;
+    overflow: hidden;
+    @include font-style(24px, #000000);
+  }
+
+  .img-box {
+    width: 200px;
+    height: 160px;
+    margin-right: 10px;
+    background-color: #f5f5f5;
+
+    .image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .label-item {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    box-sizing: border-box;
+    @include font-style(24px, #000000);
+
+    .label {
+      font-size: 28px;
+    }
+    .at-input {
+      // width: 110px;
+      padding: 0;
+      text-align: right;
+      input {
+        font-size: 28px;
+      }
+
+      &::after {
+        border: 0;
+      }
+    }
+  }
+
+  .label-icon-item {
+    position: relative;
+    padding-right: 60px;
+
+    .icon-box {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.sign-up-success_index {
+  .title1 {
+    padding: 32px;
+    text-align: center;
+    @include font-style(36px, #000000, bold);
+  }
+
+  .title2 {
+    margin-bottom: 20px;
+    text-align: center;
+    @include font-style(48px, #000000, bold);
+  }
+
+  .btn1 {
+    width: 160px;
+    margin: 0 auto 16px;
+
+    .at-button {
+      border-color: #434343;
+    }
+  }
+
+  //抵扣成功
+  .prize-box {
+    padding: 10px 30px;
+    margin: 0 30px;
+    background: linear-gradient(top, #fdd000, #fecf68, #ffceb4, #f5f5f5);
+    border-radius: 30px;
+    .prize-tit {
+      padding: 15px 0;
+      text-align: center;
+      @include font-style(28px, #ff3f81, bold);
+    }
+
+    .prize-small-box {
+      padding: 20px;
+      border-radius: 20px;
+      background-color: #ffffff;
+      @include font-style(24px, #000000);
+      box-shadow: 0 4px 6px #e4e4e4;
+    }
+
+    .prize-img {
+      width: 100%;
+      height: 160px;
+      margin: 32px 0;
+      background-color: #f5f5f5;
+      .image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .prize-tit2 {
+      font-weight: bold;
+    }
+
+    .prize-btn {
+      margin: 0 auto;
+      width: 160px;
+
+      .at-button {
+        border-color: #229e8e;
+        color: #229e8e;
+      }
+    }
+  }
+  .integral-child-tabs_exchange {
+    margin: 0 30px;
+    .recommend-title {
+      width: 240px;
+      margin: 0 auto;
+      .at-divider__content {
+        font-size: 28px;
+        font-weight: bold;
+      }
+    }
+    .integral-child-tabs_exchange--item {
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px #e4e4e4;
+      border-radius: 20px;
+      width: 48%;
+      flex: 0 0 48%;
+      &:nth-child(odd) {
+        margin-right: 4%;
+      }
+      .img-box {
+        border-radius: 20px 20px 0 0;
+        height: 460px;
+        overflow: hidden;
+        background-color: #e3e3e3;
+
+        .image {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .text-box {
+        padding: 15px 20px 25px;
+        border-radius: 0 0 20px 20px;
+        box-sizing: border-box;
+        background-color: #ffffff;
+
+        .tit,
+        .desc {
+          line-height: 32px;
+          @include font-style(24px, #000000);
+        }
+
+        .desc {
+          height: 64px;
+          overflow: hidden;
+        }
+
+        .integral-box {
+          width: auto;
+          margin-top: 8px;
+          margin-right: -16px;
+          @include font-style(28px, #000000, bold);
+        }
+      }
+    }
+  }
+}

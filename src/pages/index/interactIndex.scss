@@ -1,0 +1,33 @@
+@import "@/assets/css/mixin.scss";
+
+page {
+  background-color: #f5f5f5;
+}
+
+.interact-wrapper {
+  background: url("../../assets/images/back.png") no-repeat top left;
+  background-size: 100%;
+  .merchant-content {
+    margin-bottom: 60px;
+    text {
+      @include font-style(28px, #434343, bold);
+      margin: 0 30px 30px;
+      display: block;
+    }
+  }
+}
+.interact-container {
+  position: relative;
+  margin: 30px;
+  width: initial;
+  .right-icon {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    z-index: 1;
+    image {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}

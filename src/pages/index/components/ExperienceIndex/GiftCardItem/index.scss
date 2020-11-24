@@ -1,0 +1,43 @@
+@import "@/assets/css/mixin.scss";
+
+.gift-card-item-wrap {
+  border-radius: 20px;
+  margin-bottom: 30px;
+
+  .card-box {
+    padding: 10px 48px 20px;
+    height: 280px;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: #e0e0e0;
+
+    .icon-box {
+      width: 80px;
+      height: 80px;
+      margin-right: 10px;
+      border-radius: 80px;
+      background-color: #FF3F81;
+    }
+
+    .price {
+      line-height: 160px;
+      @include font-style(80px, #157C6F, bold);
+
+      .txt {
+        font-size: 60px;
+      }
+    }
+
+    .tit {
+      line-height: 28px;
+      @include font-style(24px, #000000);
+    }
+
+    .time,
+    .condition {
+      line-height: 24px;
+      @include font-style(20px, #000000);
+    }
+  }
+}

@@ -1,0 +1,111 @@
+@import "@/assets/css/mixin.scss";
+
+page {
+  background: #fff;
+}
+.select-coupons-wrapper {
+  height: 100%;
+  padding-top: 111px;
+  overflow-x: hidden;
+  .select-coupons-title {
+    @include font-style(28px, #000, bold);
+    position: relative;
+    text-align: center;
+    .icon {
+      position: absolute;
+      left: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgba(0, 0, 0, 0.5) !important;
+    }
+  }
+  .select-coupons-tab {
+    padding: 50px 50px 0;
+  }
+  .select-couponts-container {
+    .select-couponts-item {
+      margin-top: 20px;
+      width: 100%;
+      height: 180px;
+      overflow: hidden;
+      display: flex;
+      .box {
+        background: #ededed;
+        border-radius: 20px 15px 15px 20px;
+        height: 100%;
+        position: relative;
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 60px;
+          height: 60px;
+          background: #fff;
+          border-radius: 50%;
+        }
+        &.sale {
+          @include flex-center();
+          width: 30%;
+          @include font-style(24px, #e0004e, bold);
+          text {
+            font-size: 48px;
+          }
+          &::before {
+            left: -30px;
+          }
+          &::after {
+            display: none;
+          }
+        }
+        &.content {
+          width: 70%;
+          border-radius: 15px 20px 20px 15px;
+          border-left: 2px dashed #fff;
+          position: relative;
+          .text {
+            @include flex-center(column, start, null);
+            margin: 30px 20px 0;
+            text {
+              @include font-style(24px);
+              line-height: 34px;
+            }
+          }
+          .radio {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            .wx-radio-input {
+              height: 30px;
+              width: 30px;
+              border-radius: 50%;
+              background: #ededed;
+              border: 2px solid #848484;
+            }
+            .wx-radio-input.wx-radio-input-checked {
+              border: none;
+            }
+            .wx-radio-input.wx-radio-input-checked::before {
+              border-radius: 50%;
+              width: 50px;
+              height: 50px;
+              line-height: 50px;
+              text-align: center;
+              font-size: 30px;
+              color: #fff;
+              background: #fdd000;
+              border-color: #fdd000;
+            }
+          }
+          &::before {
+            display: none;
+          }
+          &::after {
+            right: -30px;
+          }
+        }
+      }
+    }
+  }
+}

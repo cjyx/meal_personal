@@ -1,0 +1,62 @@
+@import "@/assets/css/mixin.scss";
+.show-qrcode-wrapper {
+  padding-top: 122px;
+  position: relative;
+  height: 100%;
+  .title {
+    text-align: center;
+    @include font-style(28px, #434343, bold);
+  }
+  .qrcode-container {
+    @include flex-center(column);
+    margin: 147px 0 60px;
+    image {
+      width: 211px;
+      height: 211px;
+    }
+    text {
+      @include font-style(24px, #434343, bold);
+      line-height: 34px;
+      display: block;
+    }
+  }
+  .qrcode-list {
+    margin: 0 30px 0 40px;
+    .list-item {
+      .list-item-container {
+        align-items: flex-start;
+        .list-item-content {
+          .list-item-content_title {
+            @include font-style(28px, #229e8e, bold);
+            .at-tag {
+              @include font-style(20px, #229e8e);
+              margin-left: 10px;
+              border-color: #229e8e;
+              width: 100px;
+              height: 40px;
+              line-height: 40px;
+              background: #fff;
+            }
+          }
+          .list-item-content_desc {
+            font-size: 24px;
+            margin-top: 17px;
+          }
+        }
+        .list-item-extra_info {
+          @include font-style(24px, #434343, bold);
+        }
+      }
+    }
+  }
+  .button-container {
+    width: 100%;
+    position: absolute;
+    bottom: 79px;
+    left: 0;
+    @include flex-center(column, center, center);
+    .icon {
+      color: rgba(0, 0, 0, 0.5) !important;
+    }
+  }
+}

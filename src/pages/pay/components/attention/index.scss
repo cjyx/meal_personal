@@ -1,0 +1,66 @@
+@import "@/assets/css/mixin.scss";
+@import "~taro-ui/dist/style/components/flex.scss";
+.attention-box {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  left: 20px;
+  .top {
+    background: #e0004e;
+    border-radius: 20px;
+    height: 358px;
+    padding: 50px;
+    position: relative;
+    line-height: 34px;
+    @include font-style(24px, #fff, bold);
+    .title {
+      color: #000;
+    }
+    .content {
+      & > view {
+        margin-top: 32px;
+        .at-col {
+          flex: auto;
+          text {
+            display: block;
+          }
+        }
+        .index {
+          width: 40px;
+          height: 40px;
+          background: #fff;
+          border-radius: 50%;
+          margin-right: 10px;
+          @include flex-center();
+          @include font-style(28px, #e0004e, bold);
+        }
+      }
+    }
+    .btn {
+      position: absolute;
+      bottom: 61px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.2);
+      width: 500px;
+      height: 90px;
+      line-height: 90px;
+      border: none;
+      @include font-style(28px, rgba(253, 208, 0, 0.5), bold);
+    }
+  }
+  .bottom {
+    margin: 0 20px;
+    background: linear-gradient(
+      left,
+      #b0b0b0,
+      #ffffff,
+      #e9e9e9,
+      #cacaca,
+      #b6b6b6,
+      #b0b0b0
+    );
+    height: 60px;
+    border-radius: 0 0 40px 40px;
+  }
+}

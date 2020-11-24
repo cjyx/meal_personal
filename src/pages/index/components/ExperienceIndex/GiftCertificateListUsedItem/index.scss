@@ -1,0 +1,38 @@
+@import "@/assets/css/mixin.scss";
+
+.gift-certificate-used-item_container {
+  padding: 0 16px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+
+  .left-box {
+    width: 27%;
+    height: 186px;
+    border-radius: 20px 0 0 20px;
+    text-align: center;
+    border-right: 1PX solid #ffffff;
+    background-color: #D5D5D5;
+    @include font-style(28px, #434343, bold);
+
+    .num {
+      font-size: 48px;
+    }
+  }
+
+  .right-box {
+    padding: 30px 24px;
+    height: 186px;
+    box-sizing: border-box;
+    border-radius: 0 20px 20px 0;
+    background: linear-gradient(left, #D5D5D5, #e0e0e0, #e0e0e0, #D1D1D1, #BFBFBF);
+
+    .right-box-text{
+      @include font-style(24px, #434343);
+      line-height: 32px;
+    }
+  }
+
+  .at-swipe-action__content{
+    background-color: #f5f5f5;
+  }
+}

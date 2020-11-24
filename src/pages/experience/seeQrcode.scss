@@ -1,0 +1,53 @@
+@import "@/assets/css/mixin.scss";
+page {
+  background-color: #f5f5f5;
+}
+.see-qrcode-index {
+  position: relative;
+  overflow-x: hidden;
+  padding: 30px;
+  box-sizing: border-box;
+
+  .caption {
+    margin-bottom: 100px;
+    padding-top: 22px;
+    @include font-style(24px, #000000);
+
+    .tit {
+      margin-bottom: 6px;
+      @include font-style(48px, #000000, bold);
+    }
+  }
+
+  .number-box {
+    @include font-style(24px, #000000);
+
+    .number {
+      margin-bottom: 6px;
+      @include font-style(36px, #000000, bold);
+    }
+
+    .right-txt {
+      text-align: center;
+      @include font-style(20px, #434343);
+    }
+  }
+
+  .qr-code-box {
+    margin-top: 46px;
+    padding-bottom: 235px;
+    margin: 46px 10px 0;
+    border-radius: 40px;
+    text-align: center;
+    background-color: #e4e4e4;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, .1);
+
+    .tit {
+      padding: 100px 0 98px;
+    }
+
+    .qr-code {
+      width: 310px;
+    }
+  }
+}

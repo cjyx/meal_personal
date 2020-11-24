@@ -1,0 +1,106 @@
+@import "@/assets/css/mixin.scss";
+
+page {
+  background-color: #fdd000;
+}
+.rights-reg-box {
+  padding: 111px 0 100px;
+  overflow-x: hidden;
+  position: relative;
+  .rights-reg-title {
+    @include font-style(28px, #000, bold);
+    position: relative;
+    text-align: center;
+    .icon {
+      position: absolute;
+      left: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgba(0, 0, 0, 0.5) !important;
+    }
+  }
+  .rights-reg-container {
+    @include flex-center(column, null, center);
+    padding: 65px 51px 0;
+    .store-caption {
+      margin-bottom: 30px;
+      padding: 0;
+      width: 100%;
+      & > view {
+        color: #000;
+      }
+    }
+    .title {
+      @include font-style(28px, #000, bold);
+      line-height: 34px;
+    }
+    .sub-title {
+      @include font-style(24px, #000, bold);
+      padding: 5px 0;
+    }
+    .tips {
+      @include font-style(24px, #000);
+    }
+    .desc {
+      @include font-style(20px);
+      line-height: 26px;
+    }
+    .icon-view {
+      margin: 20px 0 30px;
+      display: block;
+    }
+    .card {
+      width: 100%;
+      margin: 10px 0 30px;
+      .qrcode {
+        padding-top: 15px;
+      }
+    }
+    .content {
+      @include flex-center(column);
+      @include font-style(24px, #434343, bold);
+      width: 100%;
+      height: 240px;
+      background: #ededed;
+      border-radius: 0 0 20px 20px;
+      margin-top: 80px;
+      position: relative;
+      .circle {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -70rpx;
+      }
+    }
+    .activityCard-container {
+      margin: 0;
+    }
+    .activite {
+      width: 100%;
+      height: 120px;
+      background: #ffffff;
+      border-radius: 20px;
+      margin: 30px 0 200px;
+      .right {
+        text-align: right;
+      }
+      .mutual {
+        text-align: center;
+        // width: 50px;
+      }
+      .caption {
+        @include flex-center(column, null, null);
+        text-align: center;
+        text {
+          @include font-style(20px, #434343, bold);
+        }
+      }
+    }
+  }
+  .common-button {
+    bottom: 20px;
+    .at-button {
+      color: #fdd000;
+    }
+  }
+}

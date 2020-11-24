@@ -1,0 +1,42 @@
+@import "@/assets/css/mixin.scss";
+@import "./components/pay/index.scss";
+@import "./components/floatLayout/index.scss";
+
+page {
+  background: #f5f5f5;
+}
+.discounts-pay-wrapper {
+  height: 100%;
+  background: url("../../assets/images/back.png") no-repeat top left;
+  background-size: 100%;
+  padding-top: 111px;
+  overflow-x: hidden;
+  .discounts-pay-title {
+    @include font-style(28px, #000, bold);
+    position: relative;
+    text-align: center;
+    .icon {
+      position: absolute;
+      left: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgba(0, 0, 0, 0.5) !important;
+    }
+  }
+  .store-caption {
+    padding: 53px 50px 20px;
+  }
+}
+.discounts-pay-container {
+  padding: 0 30px 100px;
+  position: relative;
+  height: 100%;
+  .discounts-pay-tab {
+    border-radius: 20px;
+    background: #fff;
+    margin: 0 10px;
+    .at-tabs__header .at-tabs__item {
+      font-size: 28px;
+    }
+  }
+}

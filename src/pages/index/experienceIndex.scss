@@ -1,0 +1,57 @@
+@import "@/assets/css/mixin.scss";
+page {
+  background-color: #f5f5f5;
+}
+.experience-index {
+  padding-top: 1px;
+  min-height: 100%;
+  box-sizing: border-box;
+  background: url("../../assets/images/back.png") no-repeat top left ;
+  background-size: 100%;
+  .at-tabs__item {
+    padding: 16px;
+    @include font-style(24px, #434343);
+    flex: 0 1 auto;
+  }
+
+  .at-tabs__item--active {
+    @include font-style(24px, #434343, bold);
+
+    .at-tabs__item-underline {
+      background-color: #229e8e;
+      left: 16px;
+      width: 50%;
+    }
+  }
+
+  .at-tabs__underline {
+    background-color: transparent;
+  }
+
+  .main-content {
+    padding: 0 20px;
+
+    .main-content-tabs {
+      & > .at-tabs__header {
+        & > .at-tabs__item {
+          padding: 20px 16px;
+          @include font-style(28px, #434343);
+          flex: 0 1 auto;
+        }
+
+        & > .at-tabs__item--active {
+          @include font-style(28px, #000000, bold);
+
+          .at-tabs__item-underline {
+            background-color: transparent;
+          }
+        }
+      }
+
+      .at-tabs__underline,
+      .at-tabs__header {
+        background-color: transparent;
+      }
+    }
+  }
+}

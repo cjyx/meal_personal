@@ -1,0 +1,130 @@
+@import "@/assets/css/mixin.scss";
+
+.card-tabs-index {
+  position: relative;
+
+  .at-tabs__header {
+    .at-tabs__item {
+      padding: 16px;
+      @include font-style(24px, #434343);
+      flex: 0 1 auto;
+    }
+  }
+
+  .at-tabs__item--active {
+    @include font-style(24px, #434343, bold);
+
+    .at-tabs__item-underline {
+      background-color: #229E8E;
+      left: 16px;
+      width: 50%;
+    }
+  }
+
+  .search-icon {
+    position: absolute;
+    right: 10px;
+    top: 16px;
+    z-index: 1021;
+  }
+
+  .at-tabs__underline {
+    background-color: transparent;
+  }
+
+
+  .card-tabs-index_wrap {
+    padding: 50px 30px;
+    box-sizing: border-box;
+
+    .caption {
+      margin-bottom: 30px;
+      @include font-style(20px, #848484, bold);
+    }
+  }
+
+  .card-swiper {
+    height: 390px;
+    border-radius: 20px;
+  }
+
+  .card {
+    border-radius: 20px;
+    height: 320px;
+    background-color: #e4e4e4;
+    position: relative;
+    box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.2);
+
+    .card-content {
+      .star {
+        margin: 30px 30px 16px;
+        flex: 1;
+
+        &>view {
+          background: rgba(255, 255, 255, 0.5);
+          @include flex-center(row, null, center);
+          border-radius: 30px;
+          width: 255px;
+
+          &>image {
+            width: 75px;
+            height: 60px;
+          }
+
+          &>view {
+            @include font-style(20px, #000);
+
+            image {
+              width: 24px;
+              height: 24px;
+            }
+
+            view {
+              @include flex-center(row, center, null);
+            }
+          }
+        }
+      }
+
+      .qrcode {
+        text-align: right;
+
+        view {
+          background: #fdd000;
+          @include font-style(20px, #fff);
+          padding: 5px 30px;
+          border-radius: 0 20px 0 20px;
+        }
+
+        .icon {
+          padding-right: 20px;
+        }
+      }
+    }
+
+    .card-caption {
+      margin: 16px 0 0 111px;
+      line-height: 40px;
+      @include font-style(28px, #fff);
+
+      view {
+        font-size: 24px;
+      }
+    }
+
+    .card-number {
+      position: absolute;
+      left: 111px;
+      bottom: 20px;
+      @include font-style(24px, #fff, bold);
+    }
+
+    .card-extra {
+      position: absolute;
+      right: 40px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+}

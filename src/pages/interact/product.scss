@@ -1,0 +1,75 @@
+@import "@/assets/css/mixin.scss";
+@import "./components/product/GroupOneTabs/index.scss";
+
+page {
+  background: #f5f5f5;
+}
+
+.product-container {
+  padding-bottom: 148px;
+  overflow-x: hidden;
+  .group-container {
+    .at-tabs__header {
+      padding-left: 20px;
+      .at-tabs__item.at-tabs__item--active {
+        color: #e0004e;
+      }
+      .at-tabs__item-underline {
+        background-color: #e0004e;
+      }
+    }
+  }
+}
+
+.footer-pisition {
+  background-color: #fdd000;
+  @include font-style(32px, #434343, bold);
+  .box {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    padding-left: 30px;
+    @include flex-center(row, null, center);
+    .at-button {
+      width: 200px;
+      height: 60px;
+      border: 2px solid #434343;
+      background: none;
+      @include font-style(20px, #434343, bold);
+    }
+    .right {
+      @include flex-center(row, flex-end, null);
+      flex: auto;
+    }
+    .content-btn {
+      position: relative;
+      height: 110px;
+      @include flex-center(column);
+      image {
+        width: 170px;
+        height: 100%;
+      }
+      .desc {
+        @include font-style(20px, #fff);
+        @include flex-center(column, null);
+        line-height: 32px;
+        position: absolute;
+        text-align: center;
+      }
+      &.content-btn-text {
+        image {
+          width: 260px;
+        }
+        .desc {
+          flex-direction: row;
+          @include font-style(20px, #fdd000, bold);
+        }
+      }
+    }
+  }
+}
+
+.space {
+  padding-right: 10px;
+}

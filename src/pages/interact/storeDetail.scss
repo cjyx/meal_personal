@@ -1,0 +1,200 @@
+@import "@/assets/css/mixin.scss";
+@import "./components/Rights/index.scss";
+
+page {
+  background-color: #f5f5f5;
+}
+.store-detail {
+  padding-bottom: 100px;
+  overflow-x: hidden;
+}
+.equity-container {
+  .Tips {
+    margin-top: 40px;
+    border: 2px solid #707070;
+    border-radius: 20px;
+    padding: 20px;
+    view {
+      @include font-style(28px, #434343, bold);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    text {
+      @include font-style(24px);
+      line-height: 35px;
+      display: block;
+    }
+  }
+}
+.picture {
+  margin: 0px 20px;
+  height: 130px;
+  image {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+}
+.tab-container {
+  margin: 0 20px;
+  .at-tabs__header {
+    margin-left: 30px;
+  }
+}
+
+.more {
+  @include font-style(24px, #848484);
+  margin: 20px 0;
+  text-align: center;
+}
+
+.list-container {
+  @include flex-center(row, null, center);
+  padding: 30px 0;
+  border-bottom: 1px solid #e4e4e4;
+  &:first-child {
+    padding-top: 0;
+  }
+  &:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  & > image {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+  }
+  .list-content {
+    margin-left: 20px;
+    position: relative;
+    flex: auto;
+    line-height: 35px;
+    .titile {
+      @include font-style(24px, #000000, bold);
+    }
+    .desc {
+      @include font-style(20px, #000000);
+    }
+    .money {
+      @include flex-center(row, null, flex-end);
+      .price {
+        margin: 0 8px 0 5px;
+        @include font-style(20px, #848484);
+        @include flex-center(row, null, flex-end);
+        view {
+          margin: 0 10px;
+        }
+        .current {
+          @include font-style(28px, #ff3f81, bold);
+          text {
+            font-size: 20px;
+            font-weight: normal;
+          }
+        }
+        .original {
+          text-decoration: line-through;
+        }
+      }
+      .at-tag {
+        background-color: #ffb3b3;
+        @include font-style(18px, #ff3f81);
+        height: 32px;
+        line-height: 30px;
+      }
+    }
+    .at-button {
+      position: absolute;
+      right: 6px;
+      bottom: 16px;
+      @include font-style(24px, #434343, bold);
+      height: 50px;
+      line-height: 50px;
+      min-width: 200px;
+      padding: 0 20px;
+      background-color: #fdd000;
+      border: none;
+    }
+  }
+}
+
+.remonmend-swiper {
+  height: 490px;
+}
+.remonmend-container {
+  .titile {
+    @include font-style(28px, #000);
+    line-height: 32px;
+  }
+  .dishes-item {
+    margin-top: 20px;
+    & > image {
+      height: 310px;
+      width: 100%;
+      border-radius: 20px 20px 0 0;
+      display: block;
+    }
+    & > view {
+      background-color: #fdd000;
+      padding: 15px 30px;
+      line-height: 38px;
+      border-radius: 0 0 20px 20px;
+      .name {
+        @include font-style(28px, #000);
+      }
+      view {
+        @include flex-center(row, flex-end, null);
+        text {
+          @include font-style(28px, #434343, bold);
+          &:first-child {
+            @include font-style(20px, #000);
+            flex: auto;
+          }
+        }
+      }
+    }
+  }
+  .remonmend-pic-swiper {
+    height: 180px;
+    image {
+      width: 240px;
+      height: 200px;
+      border-radius: 6px;
+      transform: scale(0.9);
+    }
+  }
+}
+
+//店铺活动
+.activity-container {
+  display: flex;
+  & > view {
+    flex: 1;
+    width: 300px;
+    height: 350px;
+    border-radius: 20px;
+    margin: 0 25px;
+    background: linear-gradient(
+      left,
+      #d3d3d3,
+      #e5e5e5,
+      #eaeaea,
+      #dedede,
+      #c7c7c7
+    );
+    @include flex-center(column);
+    text {
+      @include font-style(28px, #000);
+      line-height: 45px;
+      margin-top: 10px;
+    }
+    .at-button {
+      background: #434334;
+      @include font-style(24px, #fdd000);
+      width: 220px;
+      height: 50px;
+      line-height: 50px;
+      margin-top: 55px;
+      border: none;
+    }
+  }
+}

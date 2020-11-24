@@ -1,0 +1,14 @@
+.swiper-container {
+  height: 250px;
+  .swiper-img {
+    width: 540px;
+    height: 250px;
+    display: block;
+    transform: scale(0.85);
+    transition: all 0.3s ease;
+    border-radius: 20px;
+    &.swiper-active {
+      transform: scale(1); //放大缩放的效果
+    }
+  }
+}

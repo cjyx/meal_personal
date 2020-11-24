@@ -1,0 +1,33 @@
+@import "@/assets/css/mixin.scss";
+
+.goods-tabs {
+
+  .at-tabs__item {
+    padding: 16px;
+    @include font-style(24px, #434343);
+    flex: 0 1 auto;
+  }
+
+  .at-tabs__item--active {
+    @include font-style(24px, #434343, bold);
+
+    .at-tabs__item-underline {
+      background-color: #229E8E;
+      left: 16px;
+      width: 50%;
+    }
+  }
+
+  .at-tabs__underline {
+    background-color: transparent;
+  }
+
+  .goods-tabs_ad {
+    width: 710px;
+    height: 150px;
+    max-width: 100%;
+    margin: 40px auto 20px;
+    border-radius: 20px;
+    background-color: #E4E4E4;
+  }
+}

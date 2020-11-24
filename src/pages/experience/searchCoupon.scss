@@ -1,0 +1,77 @@
+@import "@/assets/css/mixin.scss";
+@import "../index/components/ExperienceIndex/GiftCertificateListItem/index.scss";
+@import "../index/components/ExperienceIndex/GiftCardItem/index.scss";
+page {
+  background-color: #f5f5f5;
+}
+.search-coupon {
+  position: relative;
+  padding: 0 32px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+  .search-container {
+    background: initial;
+    margin-top: 40px;
+
+    .at-search-bar__input-cnt {
+      height: 70px;
+      background: linear-gradient(left, #e5e5e5, #e0e0e0);
+
+      .at-search-bar__input,
+      .at-search-bar__placeholder-wrap,
+      .at-search-bar__clear {
+        height: 70px !important;
+      }
+
+      .at-search-bar__placeholder-wrap .at-icon {
+        font-size: 36px;
+      }
+    }
+
+    .at-search-bar__action {
+      background-color: #229e8e;
+    }
+  }
+
+  .caption {
+    margin-top: 35px;
+    margin-bottom: 30px;
+  }
+
+  .selected-wrap {
+    padding: 0 16px;
+    margin-bottom: 30px;
+    @include font-style(24px, #434343);
+
+    .item {
+      width: 180px;
+      margin-right: 24px;
+    }
+
+    .dd-box {
+      display: none;
+    }
+  }
+
+  .show .dd-box {
+    display: block;
+  }
+
+  .filter-wrap {
+    padding-top: 56px;
+    @include font-style(24px, #434343);
+
+    .dt {
+      margin-bottom: 30px;
+    }
+
+    .dd {
+      margin-bottom: 40px;
+    }
+
+    .active {
+      color: #ff3f81;
+    }
+  }
+}

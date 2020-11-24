@@ -1,0 +1,69 @@
+//隐藏多余字符
+@mixin text-overflow {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+//弹性布局
+@mixin flex-center($direction: row,
+  $justify: center,
+  $align: center,
+  $flex-wrap: null) {
+  display: -webkit-flex;
+  display: flex;
+
+  @if ($direction !=null) {
+    flex-direction: $direction;
+  }
+
+  @if ($justify !=null) {
+    justify-content: $justify;
+  }
+
+  @if ($align !=null) {
+    align-items: $align;
+  }
+
+  @if ($flex-wrap !=null) {
+    flex-wrap: $flex-wrap;
+  }
+}
+
+//设置字体颜色，大小
+@mixin font-style($size:28px, $color:#434343, $weight:normal) {
+  @if ($size !=null) {
+    font-size: $size;
+  }
+
+  @if ($color !=null) {
+    color: $color;
+  }
+
+  @if ($weight !=null) {
+    font-weight: $weight;
+  }
+}
+
+// 渐变背景
+@mixin linear-gradient($color:#ffffff, $color2:#000000, $direction:horizontal) {
+  @if($direction==horizontal) {
+    background-color: $color2;
+    background: -moz-linear-gradient(90deg, $color, $color2);
+    background: -webkit-gradient(linear, left top, right top, from($color), to($color2));
+    background: -webkit-linear-gradient(90deg, $color, $color2);
+    background: -o-linear-gradient(90deg, $color, $color2);
+    background: -ms-linear-gradient(90deg, $color, $color2);
+    background: linear-gradient(90deg, $color, $color2);
+  }
+
+  @else {
+    background-color: $color2;
+    background: -moz-linear-gradient(0deg, $color, $color2);
+    background: -webkit-gradient(linear, left top, left bottom, from($color), to($color2));
+    background: -webkit-linear-gradient(0deg, $color, $color2);
+    background: -o-linear-gradient(0deg, $color, $color2);
+    background: -ms-linear-gradient(0deg, $color, $color2);
+    background: linear-gradient(0deg, $color, $color2);
+  }
+}

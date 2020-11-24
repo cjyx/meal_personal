@@ -1,0 +1,55 @@
+@import "./experienceIndex.scss";
+@import "./components/ExperienceIndex/AppointTabs/index.scss";
+@import "./components/ExperienceIndex/RewardTabs/index.scss";
+@import "./components/ExperienceIndex/StoreTabs/index.scss";
+@import "./components/ExperienceIndex/GoodsTabs/index.scss";
+@import "./components/ExperienceIndex/GoodsTabsItem/index.scss";
+@import "./components/ExperienceIndex/IntegralTabs/index.scss";
+@import "./components/ExperienceIndex/IntegralChildTabs/index.scss";
+@import "./components/ExperienceIndex/CardTabs/index.scss";
+@import "./components/ExperienceIndex/GiftCertificateTabs/index.scss";
+@import "./components/ExperienceIndex/GiftCertificateListItem/index.scss";
+@import "./components/ExperienceIndex/GiftCertificateListUsedItem/index.scss";
+//互动
+@import "./interactIndex.scss";
+@import "./components/InteractIndexIndex/BrowseTabs/index.scss";
+@import "./components/InteractIndexIndex/RecentTabs/index.scss";
+@import "./components/InteractIndexIndex/AppointActivityTabs/index.scss";
+@import "./components/InteractIndexIndex/HotProductTabs/index.scss";
+
+.home {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  // height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  .main {
+    flex: 1;
+    padding-bottom: 240px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+.tab-bar-bottom.at-tab-bar {
+  background-color: transparent;
+  .at-tab-bar__item {
+    padding: 0 12px;
+    color: #848484;
+  }
+  .at-tab-bar__title {
+    font-size: 24px;
+  }
+  .at-tab-bar__item--active {
+    color: #434343;
+  }
+  &::after {
+    border: none;
+  }
+
+  .icon {
+    font-size: 42px;
+  }
+}

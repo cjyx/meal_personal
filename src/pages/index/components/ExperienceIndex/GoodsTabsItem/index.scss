@@ -1,0 +1,77 @@
+@import "@/assets/css/mixin.scss";
+
+.goods-tabs-item {
+  margin-bottom: 20px;
+  padding: 10px 20px 0px;
+  border-radius: 20px;
+  background-color: #ffffff;
+
+  .avatar-box {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    border: 2PX solid #434343;
+    border-radius: 14px;
+    background-color: #ffffff;
+
+    &>.at-row {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .at-avatar {
+    width: 100%;
+    height: 100%;
+    line-height: initial;
+  }
+
+  .goods-tabs-item_top {
+    padding-bottom: 12px;
+    border-bottom: 1PX dashed #C3C3C3;
+
+    .active-name {
+      @include font-style(24px, #000000);
+    }
+
+    .right-txt {
+      @include font-style(20px, #000000);
+    }
+  }
+
+  .goods-tabs-item_main {
+    position: relative;
+    padding: 20px 0 80px;
+    @include font-style(20px, #000000);
+
+    .avatar-box {
+      width: 120px;
+      height: 120px;
+      background-color: #E4E4E4;
+      border: none;
+    }
+
+    .date {
+      margin-bottom: 8px;
+    }
+
+    .btn-box {
+      position: absolute;
+      bottom: 20px;
+
+      .btn {
+        width: 140px;
+        margin-left: 20px;
+      }
+
+      .at-button {
+        border-color: #434343;
+      }
+
+      .at-button__text {
+        @include font-style(24px, #434343);
+      }
+    }
+  }
+}

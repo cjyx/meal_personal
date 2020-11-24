@@ -1,0 +1,44 @@
+@import "@/assets/css/mixin.scss";
+
+.gift-certificate-tabs-index {
+  .space {
+    padding-right: 8px;
+  }
+
+  .at-tabs__header {
+    .at-tabs__item {
+      padding: 16px;
+      @include font-style(24px, #434343);
+      flex: 0 1 auto;
+    }
+  }
+
+  .at-tabs__item--active {
+    @include font-style(24px, #434343, bold);
+
+    .at-tabs__item-underline {
+      background-color: #229E8E;
+      left: 16px;
+      width: 50%;
+    }
+  }
+
+  .at-tabs__underline {
+    background-color: transparent;
+  }
+
+  .caption {
+    margin-top: 35px;
+    margin-bottom: 30px;
+  }
+
+  .selected-wrap {
+    padding: 0 16px;
+    margin-bottom: 30px;
+    @include font-style(24px, #434343);
+
+    .item {
+      margin-right: 40px;
+    }
+  }
+}

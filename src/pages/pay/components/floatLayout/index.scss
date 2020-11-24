@@ -1,0 +1,80 @@
+@import "@/assets/css/mixin.scss";
+.bold {
+  font-weight: bold;
+}
+.color-e0004e {
+  color: #e0004e !important;
+}
+
+//弹框
+.discount-pay-floatlayout {
+  .at-float-layout__container,
+  .layout-body,
+  .layout-body__content {
+    max-height: initial !important;
+  }
+}
+.discount-pay-float {
+  background: #fff;
+  border-radius: 20px 20px 0 0;
+  margin: 0 20px;
+  padding: 20px 40px;
+  height: 980px;
+  .title {
+    @include flex-center(column, null, flex-start);
+    @include font-style(28px, #229e8e, bold);
+    line-height: 38px;
+    position: relative;
+    padding-top: 20px;
+    text {
+      display: block;
+    }
+    .icon {
+      position: absolute;
+      right: -20px;
+      top: 20px;
+      transform: translateY(-50%);
+      color: rgba(0, 0, 0, 0.5) !important;
+    }
+  }
+  .content {
+    margin-top: 20px;
+    .caption {
+      @include font-style(28px, #000, bold);
+      margin-bottom: 20px;
+    }
+    .desc {
+      @include font-style(28px, #000);
+      line-height: 48px;
+      display: flex;
+      text {
+        flex: 1;
+        @include flex-center(row, flex-end);
+      }
+    }
+    &.content-two {
+      margin-top: 40px;
+      .desc {
+        font-size: 24px;
+        line-height: 38px;
+      }
+    }
+  }
+  .btns {
+    margin-top: 126px;
+    display: flex;
+    .at-button {
+      flex: 1;
+      display: flex;
+      width: 300px;
+      height: 80px;
+      line-height: 80px;
+      border: none;
+      @include font-style(28px, #fff, bold);
+      background: #fdd000;
+    }
+    .btn-last {
+      background: #229e8e;
+    }
+  }
+}

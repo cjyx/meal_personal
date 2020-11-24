@@ -1,0 +1,147 @@
+@import "@/assets/css/mixin.scss";
+@import "../index/components/ExperienceIndex/GiftCardItem/index.scss";
+page {
+  background-color: #f5f5f5;
+  @include linear-gradient(#ffffff, #d5d5d5, vertical);
+}
+.open-gift-index {
+  position: relative;
+  padding: 58px 20px 0px;
+  overflow-x: hidden;
+  box-sizing: border-box;
+
+  .at-avatar {
+    width: 100%;
+    height: 100%;
+    line-height: initial;
+  }
+
+  .avatar-box {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    border: 2px solid #434343;
+    border-radius: 14px;
+    background-color: #ffffff;
+  }
+
+  .info {
+    position: relative;
+    padding: 0 10px 24px;
+
+    .store-name {
+      margin-bottom: 2px;
+      @include font-style(24px, #000000);
+    }
+
+    .store-desc {
+      @include font-style(20px, #000000);
+    }
+
+    .store-distance {
+      margin-top: 16px;
+      @include font-style(20px, #434343);
+    }
+
+    .text {
+      padding: 0 8px;
+    }
+
+    .store-address {
+      margin-top: 4px;
+      @include font-style(24px, #434343);
+    }
+  }
+
+  .caption {
+    padding-top: 32px;
+    @include font-style(40px, #000000, bold);
+  }
+
+  .integral {
+    line-height: 40px;
+    margin: 57px 0 236px;
+    text-align: center;
+    @include font-style(28px, #000000, bold);
+  }
+
+  .open-gift-main {
+    position: relative;
+    margin-top: 110px;
+    padding-top: 196px;
+
+    .open-gift-main_top {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 313px;
+
+      .image {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .open-gift-main_middle {
+      position: relative;
+      z-index: 2;
+      padding: 72px 30px 60px;
+      background-color: #d5d5d5;
+      border: 1px solid #000000;
+
+      .title {
+        margin-bottom: 40px;
+        @include font-style(36px, #434343, bold);
+        text-align: center;
+      }
+
+      .discount {
+        margin-bottom: 57px;
+        line-height: 48px;
+        text-align: center;
+        @include font-style(24px, #000000, bold);
+
+        .at-icon {
+          margin-bottom: 20px;
+        }
+      }
+
+      .card-swiper {
+        border-radius: 20px;
+        height: 340px;
+      }
+
+      .btn {
+        width: 500px;
+        margin: 40px auto 0;
+
+        .at-button {
+          height: 90px;
+          line-height: 90px;
+          background-color: #000000;
+          @include font-style(28px, #fdd000, bold);
+        }
+      }
+    }
+
+    .open-gift-main_bot {
+      padding: 0 16px;
+
+      .box {
+        height: 60px;
+        border-radius: 0 0 40px 40px;
+        background-color: #b0b0b0;
+        background: linear-gradient(
+          left,
+          #b0b0b0,
+          #ffffff,
+          #e9e9e9,
+          #cacaca,
+          #b6b6b6,
+          #b0b0b0
+        );
+      }
+    }
+  }
+}

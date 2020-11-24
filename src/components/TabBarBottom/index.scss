@@ -1,0 +1,45 @@
+.tabBar-wrap {
+  height: 100px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  background-color: #d5d5d5;
+  background: -moz-linear-gradient(90deg, #d5d5d5, #f9f9f9 30%, #bfbfbf);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#d5d5d5),
+    color-stop(0.3, #f9f9f9),
+    to(#bfbfbf)
+  );
+  background: -webkit-linear-gradient(90deg, #d5d5d5, #f9f9f9 30%, #bfbfbf);
+  background: -o-linear-gradient(90deg, #d5d5d5, #f9f9f9 30%, #bfbfbf);
+  background: -ms-linear-gradient(90deg, #d5d5d5, #f9f9f9 30%, #bfbfbf);
+  background: linear-gradient(90deg, #d5d5d5, #f9f9f9 30%, #bfbfbf);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px 8px 0 0;
+
+  .special {
+    position: relative;
+
+    .box {
+      position: absolute;
+      z-index: 801;
+      left: 50%;
+      padding: 10px;
+      margin-left: -50rpx;
+      transform: translateY(-50%);
+      border-radius: 100px;
+      background-color: #f5f5f5;
+
+      .circle {
+        width: 90px;
+        height: 90px;
+        box-shadow: none;
+      }
+    }
+  }
+}

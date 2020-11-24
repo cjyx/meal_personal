@@ -1,0 +1,74 @@
+@import "@/assets/css/mixin.scss";
+.browse-box {
+  padding: 0 20px;
+
+  .browse-item {
+    margin-bottom: 20px;
+
+    .store-caption {
+      padding: 0 0 30px;
+      @include flex-center(row, null, center);
+      .at-avatar {
+        width: 80px;
+        height: 80px;
+        line-height: initial;
+        border-radius: 20px;
+      }
+      & > view {
+        margin-left: 10px;
+        text {
+          @include font-style(28px, #000);
+          display: block;
+          line-height: 35px;
+          &:nth-child(2) {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+    .store-detail {
+      background: linear-gradient(
+        left,
+        #d3d3d3,
+        #e5e5e5,
+        #eaeaea,
+        #dedede,
+        #c7c7c7
+      );
+      border-radius: 20px;
+      @include flex-center(row, flex-top, flex-top);
+      padding: 25px;
+      position: relative;
+      &::before {
+        content: "";
+        border-left: 16px transparent solid;
+        border-right: 16px transparent solid;
+        border-bottom: 24px #d3d3d3 solid;
+        position: absolute;
+        top: -22px;
+      }
+
+      .tag {
+        margin-right: 32px;
+      }
+      .store-content {
+        @include flex-center(column, null, null);
+        @include font-style(24px);
+        flex: 1;
+        .icon {
+          margin-right: 10px;
+          line-height: 36px;
+        }
+      }
+      .store-extra {
+        position: relative;
+        .icon {
+          right: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+          position: absolute;
+        }
+      }
+    }
+  }
+}

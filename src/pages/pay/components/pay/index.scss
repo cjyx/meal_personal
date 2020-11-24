@@ -1,0 +1,46 @@
+@import "@/assets/css/mixin.scss";
+
+.discount-checkbox {
+  @include flex-center(row, null);
+  &::after,
+  &::before {
+    display: none;
+  }
+  .at-checkbox__option {
+    padding-left: 0;
+    &.at-checkbox__option--selected .at-checkbox__icon-cnt {
+      background-color: #e0004e !important;
+    }
+    .at-checkbox__option-wrap {
+      padding: 0;
+      .at-checkbox__title {
+        @include font-style(28px);
+      }
+      .at-checkbox__icon-cnt {
+        width: 33px;
+        min-width: 33px;
+        height: 33px;
+        margin: 6px 10px 0 0;
+        background: #e4e4e4;
+        border-color: #707070;
+      }
+    }
+  }
+}
+.discount-input {
+  padding: 0;
+  &::after {
+    display: none;
+  }
+  input {
+    @include font-style(28px);
+    line-height: initial;
+    padding-right: 0;
+  }
+}
+.bold {
+  font-weight: bold;
+}
+.color-e0004e {
+  color: #e0004e !important;
+}

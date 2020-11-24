@@ -1,0 +1,69 @@
+@import "~taro-ui/dist/style/components/flex.scss";
+@import "@/assets/css/mixin.scss";
+.rights-container {
+  .card-container.at-card {
+    background: initial;
+    box-shadow: none;
+    padding: 0;
+    margin-bottom: 0;
+    .at-card__content {
+      padding: 0;
+    }
+  }
+
+  .rights-item {
+    position: relative;
+    @include flex-center(column);
+    &:nth-child(2) {
+      .content {
+        background: #ff5e5b;
+      }
+    }
+    &:nth-child(3) {
+      .content {
+        background: #ffa515;
+      }
+    }
+  }
+  .title {
+    @include font-style(28px, #434343, bold);
+  }
+  .icon-content {
+    position: absolute;
+    top: 38px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  image {
+    width: 100%;
+    height: 120px;
+    margin-top: 46px;
+  }
+  .content {
+    padding: 20px 0px 0;
+    min-height: 240px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    background: #00adb5;
+
+    text {
+      line-height: 36px;
+      display: block;
+      @include font-style(24px, #fff, bold);
+      &.sub-text {
+        font-weight: normal;
+      }
+    }
+    .line {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 63px;
+      margin-top: 52px;
+      width: 34px;
+      height: 3px;
+      background: #fff;
+    }
+  }
+}

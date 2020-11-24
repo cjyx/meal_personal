@@ -1,0 +1,77 @@
+@import "@/assets/css/mixin.scss";
+
+.integral-tabs {
+  .at-tabs__header {
+    .at-tabs__item {
+      padding: 16px;
+      @include font-style(24px, #434343);
+      flex: 0 1 auto;
+    }
+  }
+
+  .at-tabs__item--active {
+    @include font-style(24px, #434343, bold);
+
+    .at-tabs__item-underline {
+      background-color: #229E8E;
+      left: 16px;
+      width: 50%;
+    }
+  }
+
+  .at-tabs__underline {
+    background-color: transparent;
+  }
+
+  .integral-tabs-wrap {
+    padding: 10px 20px 0;
+  }
+
+  .integral-tabs_item {
+    padding-top: 30px;
+
+    .month {
+      @include font-style(24px, #434343);
+    }
+
+    .expenditure {
+      @include font-style(20px, #848484);
+    }
+
+    .right {
+      @include font-style(24px, #848484);
+    }
+
+    .integral-tabs_sItem {
+      padding: 30px 0 15px;
+      border-bottom: 1PX solid #E4E4E4;
+
+      .avatar-box {
+        margin-right: 10px;
+      }
+
+      .text {
+        @include font-style(20px, #434343);
+      }
+
+      .store-name {
+        margin-bottom: 10px;
+        font-size: 24px;
+      }
+
+      .desc {
+        margin-bottom: 10px;
+      }
+
+      .right-txt {
+        text-align: right;
+        @include font-style(24px, #FF3F81);
+
+        .price {
+          margin-bottom: 4px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

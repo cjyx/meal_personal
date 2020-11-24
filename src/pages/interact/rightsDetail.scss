@@ -1,0 +1,214 @@
+@import "@/assets/css/mixin.scss";
+@import "./components/Rights/index.scss";
+
+page {
+  background-color: #f5f5f5;
+}
+.rightsDetail-container {
+  padding-bottom: 100px;
+  overflow-x: hidden;
+}
+.qrcode-container {
+  @include flex-center(column);
+  margin: 53px 0;
+  image {
+    width: 211px;
+    height: 211px;
+  }
+  text {
+    @include font-style(24px);
+    line-height: 35px;
+    &.desc {
+      font-weight: bold;
+    }
+  }
+  & > view {
+    margin-top: 30px;
+    @include font-style(24px);
+    .at-button {
+      background: #fdd000;
+      width: 400px;
+      height: 80px;
+      line-height: 80px;
+      border: none;
+      @include font-style(24px, #434343, bold);
+    }
+  }
+}
+.rights-tabs {
+  margin: 100px 50px 20px;
+  .at-tabs__header {
+    margin-left: 30px;
+  }
+  .at-tabs-pane {
+    margin-top: 40px;
+  }
+}
+.myRights {
+  border-radius: 10px;
+  background: #e4e4e4;
+  overflow: hidden;
+  .content {
+    align-items: center;
+    padding: 28px 0;
+    background: #434343;
+    image {
+      width: 48px;
+      height: 69px;
+    }
+    & > view {
+      white-space: initial;
+      @include font-style(24px, #fdd000, bold);
+      &:nth-child(1) {
+        padding-left: 45px;
+      }
+      &:nth-child(3) {
+        padding-right: 30px;
+        @include flex-center(column, null, flex-end);
+      }
+      text {
+        display: inline-block;
+      }
+    }
+  }
+  .grade {
+    background: #ff5e5b;
+    height: 36px;
+    line-height: 36px;
+    padding-left: 30px;
+    @include font-style(20px, #fff);
+  }
+  .grade-next {
+    background: #00adb5;
+  }
+  .grade-content {
+    align-items: flex-start;
+    background: initial;
+    image {
+      width: 66px;
+      height: 60px;
+    }
+    & > view {
+      @include font-style(28px);
+    }
+  }
+  .grade-content-color {
+    background: #fdd000;
+  }
+  .caption {
+    padding: 30px;
+    line-height: 34px;
+    @include font-style(24px, #fff);
+  }
+}
+
+.inviteFriends {
+  margin: 60px 0 0;
+  .add {
+    .at-badge__num {
+      left: -60px;
+      top: -40px;
+      right: initial;
+      background: #c3c3c3;
+      min-width: 228px;
+      padding: 8px 12px;
+      box-shadow: none;
+      @include font-style(20px, #848484, bold);
+    }
+  }
+  .invite-list {
+    background: #e4e4e4;
+    border-radius: 20px;
+    height: 160px;
+    width: 100%;
+    margin-top: 20px;
+    .noContent {
+      @include flex-center(column);
+      height: 100%;
+      text {
+        @include font-style(20px);
+        line-height: 42px;
+        &.title {
+          @include font-style(28px, #434343, bold);
+        }
+      }
+    }
+  }
+}
+
+.at-float-layout__container {
+  background-color: initial;
+  min-height: initial;
+}
+.at-float-layout .layout-body {
+  padding: 0;
+}
+.floatLayout-container {
+  background-color: #fdd000;
+  border-radius: 20px 20px 0 0;
+  padding: 60px 80px 50px;
+  image {
+    width: 100%;
+    height: 180px;
+    border-radius: 20px;
+  }
+  .operation {
+    margin: 60px 0;
+    .at-col {
+      @include flex-center(column);
+      @include font-style(28px, #000);
+      view {
+        margin-top: 18px;
+      }
+    }
+  }
+  .close {
+    width: 160px;
+    height: 60px;
+    border: none;
+    background: #000;
+    @include font-style(24px, #fff);
+  }
+}
+
+.consumer-welfare {
+  .box {
+    border-radius: 20px;
+    overflow: hidden;
+    background: #ededed;
+    position: relative;
+    .top {
+      height: 120px;
+      background: #fdd000;
+    }
+    .circle {
+      position: absolute;
+      left: 50%;
+      top: 30px;
+      transform: translateX(-50%);
+    }
+    .content {
+      min-height: 180px;
+      padding: 30px;
+      @include flex-center(column, center, null);
+      @include font-style(24px, #434343, bold);
+    }
+  }
+}
+
+.Tips {
+  margin-top: 40px;
+  border: 2px solid #707070;
+  border-radius: 20px;
+  padding: 20px;
+  view {
+    @include font-style(28px, #434343, bold);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  text {
+    @include font-style(24px);
+    line-height: 35px;
+    display: block;
+  }
+}

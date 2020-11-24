@@ -1,0 +1,67 @@
+@import "@/assets/css/mixin.scss";
+page {
+  background-color: #fdd000;
+}
+
+.receive-card-wrapper {
+  padding: 224px 35px 0;
+  position: relative;
+  overflow: hidden;
+}
+.receive-card-container {
+  background: #fff;
+  border-radius: 20px;
+  padding: 72px 16px;
+  border-bottom: 4px dashed transparent;
+  background: linear-gradient(white, white) padding-box,
+    repeating-linear-gradient(
+      90deg,
+      #fdd000 0,
+      #fdd000 22px,
+      white 0,
+      white 40px
+    );
+  .card {
+    .qrcode {
+        padding-top: 15px;
+    }
+  }
+  .text-box {
+    @include font-style(24px, #000);
+    @include flex-center(column);
+    line-height: 34px;
+    padding-top: 80px;
+    .title {
+      font-weight: bold;
+    }
+    .tip {
+      color: #00adb5;
+      font-weight: bold;
+    }
+  }
+}
+
+.desc-content {
+  padding: 20px;
+  border-bottom: 0;
+  margin-bottom: 520px;
+  .box {
+    background: #00adb5;
+    border-radius: 10px;
+    height: 160px;
+    @include flex-center(column);
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+      border: 1px dashed #fff;
+    }
+    text {
+      @include font-style(24px, #fff, bold);
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import "@/assets/css/mixin.scss";
+@import "~taro-ui/dist/style/components/flex.scss";
+
+.floatLayout-container {
+  background-color: #fdd000;
+  border-radius: 20px 20px 0 0;
+  padding: 0 80px 50px;
+  image {
+    width: 100%;
+    height: 180px;
+    border-radius: 20px;
+    padding-top: 60px;
+  }
+  .operation {
+    padding: 60px 0;
+    .at-col {
+      @include flex-center(column);
+      @include font-style(28px, #000);
+      Text {
+        margin-top: 18px;
+        display: block;
+      }
+    }
+  }
+  .close {
+    width: 160px;
+    height: 60px;
+    border: none;
+    background: #000;
+    @include font-style(24px, #fff);
+  }
+}

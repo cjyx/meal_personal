@@ -1,0 +1,219 @@
+@import "@/assets/css/mixin.scss";
+
+.group-buy-box {
+  .tips {
+    @include linear-gradient(#ededed, #ffffff);
+    @include font-style(20px, #848484);
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text {
+      padding-left: 10px;
+    }
+  }
+  .pic-swiper {
+    height: 180px;
+    image {
+      width: 100%;
+      height: 210px;
+      border-radius: 6px;
+      transform: scale(0.95);
+    }
+  }
+  .countdown {
+    padding: 20px 0;
+    .left {
+      flex: 1;
+      .name {
+        @include font-style(20px, #848484, bold);
+      }
+      .time {
+        .at-countdown__item {
+          .at-countdown__time-box {
+            @include font-style(20px, #848484);
+            @include flex-center();
+            font-family: "Microsoft YaHei";
+            min-width: 30px;
+            height: 30px;
+            background: #e4e4e4;
+            border-radius: 6px;
+          }
+          .at-countdown__separator {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .right {
+      @include flex-center(row, flex-end, center);
+      padding-right: 28px;
+      .share {
+        width: 50px;
+        height: 50px;
+        border-radius: 12px;
+        border: 2px solid #434343;
+        justify-content: flex-end;
+        @include flex-center();
+      }
+    }
+  }
+}
+
+.group-buy-list {
+  .title {
+    @include font-style(24px);
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e4e4e4;
+  }
+  .content {
+    .content-item {
+      padding-top: 20px;
+      .left {
+        @include flex-center(row, null);
+        @include font-style(24px);
+        .at-avatar {
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+      }
+      .right {
+        align-items: flex-end;
+        @include font-style(20px);
+        @include flex-center(row, flex-end, center);
+        .countdown {
+          text-align: right;
+          margin-right: 20px;
+          .at-countdown__item {
+            .at-countdown__time-box {
+              min-width: 22px;
+              font-size: 22px;
+              font-family: "Microsoft YaHei";
+            }
+            .at-countdown__separator {
+              padding: 0 3px;
+              font-size: 22px;
+            }
+          }
+        }
+        .btn {
+          width: 84px;
+          height: 40px;
+          line-height: 40px;
+          border: none;
+          background: #fdd000;
+          @include font-style(20px);
+        }
+      }
+    }
+  }
+}
+.purchase-container {
+  .at-tabs__item.at-tabs__item--active {
+    color: #434343 !important;
+  }
+  .at-tabs__item-underline {
+    background-color: #229e8e !important;
+  }
+  .purchase-detail {
+    @include font-style(24px, #000);
+    .title {
+      &::before {
+        content: "•";
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
+    .commodity {
+      margin: 10px 0;
+      .right {
+        text-align: right;
+        font-size: 20px;
+        font-weight: bold;
+        text {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+  .announcement {
+    text {
+      @include font-style(24px);
+      line-height: 38px;
+      display: block;
+      &.title {
+        font-weight: bold;
+      }
+    }
+  }
+}
+.member-container {
+  padding: 0;
+  overflow: hidden;
+  .box {
+    position: relative;
+    height: 160px;
+  }
+  .at-card__content {
+    padding: 0;
+  }
+  image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  .content {
+    position: relative;
+    padding: 20px 50px 0 66px;
+    .top {
+      @include flex-center();
+      text {
+        @include font-style(24px);
+        flex: auto;
+      }
+      .at-button {
+        width: 110px;
+        height: 40px;
+        line-height: 40px;
+        background: #fdd000;
+        @include font-style(20px);
+        border: none;
+      }
+    }
+    .desc {
+      @include font-style(20px, #848484);
+      margin-top: 40px;
+      text {
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+.store-box {
+  .title {
+    @include font-style(28px, #434343, bold);
+  }
+  .store-caption {
+    padding: 20px 0;
+  }
+  .icon-group {
+    @include flex-center(column, null);
+    width: 60px;
+    view {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      white-space: nowrap;
+
+      &.text {
+        padding: 10px 0;
+        width: initial;
+        height: initial;
+        border: none;
+        @include font-style(20px);
+      }
+    }
+  }
+}

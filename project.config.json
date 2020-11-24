@@ -1,0 +1,48 @@
+{
+	"miniprogramRoot": "dist/",
+	"projectname": "meal_customer",
+	"description": "",
+	"appid": "wx5a97520f98e4fb5c",
+	"setting": {
+		"urlCheck": true,
+		"es6": false,
+		"postcss": false,
+		"minified": false
+	},
+	"compileType": "miniprogram",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "pages/experience/clockRecord",
+					"pathName": "pages/experience/clockRecord",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

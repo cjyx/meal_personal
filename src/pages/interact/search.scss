@@ -1,0 +1,66 @@
+@import "@/assets/css/mixin.scss";
+@import "../index/components/InteractIndexIndex/BrowseTabs/index.scss";
+
+.store-container {
+  position: relative;
+  margin: 30px;
+  width: initial;
+  .right-icon {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    image {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+.search-container {
+  background: initial;
+  margin-top: 40px;
+  .at-search-bar__input-cnt {
+    height: 70px;
+    background: linear-gradient(left, #e5e5e5, #e0e0e0);
+    .at-search-bar__input,
+    .at-search-bar__placeholder-wrap,
+    .at-search-bar__clear {
+      height: 70px !important;
+    }
+    .at-search-bar__placeholder-wrap .at-icon {
+      font-size: 36px;
+    }
+  }
+  .at-search-bar__action {
+    background-color: #229e8e;
+  }
+}
+
+.tag-group {
+  margin: 20px 0 74px;
+  .at-tag {
+    border: 1px solid #c3c3c3;
+    min-width: 211px;
+    margin-right: 20px;
+    @include font-style(24px, #848484);
+  }
+}
+.history {
+  .history-title {
+    @include flex-center(row, center, null);
+    text {
+      @include font-style(28px, #000);
+      flex: auto;
+    }
+  }
+}
+
+.button-container {
+  width: 100%;
+  position: absolute;
+  bottom: 79px;
+  left: 0;
+  @include flex-center(column, center, center);
+  .icon {
+    color: rgba(0, 0, 0, 0.5) !important;
+  }
+}

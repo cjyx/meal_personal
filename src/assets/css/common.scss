@@ -1,0 +1,317 @@
+@import "@/assets/css/mixin.scss";
+
+.header-content {
+  padding: 111px 30px 53px;
+  @include flex-center(row, null);
+
+  .at-avatar {
+    width: 60px;
+    height: 60px;
+    line-height: initial;
+  }
+
+  .header-content-right {
+    margin-left: 10px;
+    @include flex-center(column, null, null);
+
+    .text {
+      @include font-style(24px, #000);
+      margin-bottom: 10px;
+    }
+
+    .image {
+      width: 55px;
+      height: 20px;
+    }
+  }
+
+  &.header-integral {
+    padding: 0 30px 0;
+
+    & > .image {
+      width: 25px;
+      height: 29px;
+      line-height: initial;
+    }
+
+    .header-content-right {
+      & > .header-integral-number {
+        @include font-style(46px, #434343, bold);
+      }
+
+      .header-integral-dec {
+        @include font-style(16px, #434343);
+      }
+    }
+  }
+}
+
+.tab-container {
+  width: initial;
+  overflow: initial;
+
+  .at-tabs__header {
+    text-align: left;
+    background: initial;
+    margin-left: 20px;
+
+    .at-tabs__item {
+      @include font-style(24px);
+      padding: 20px 0;
+      margin-right: 60px;
+
+      &.at-tabs__item--active {
+        @include font-style(28px, #434343, bold);
+      }
+    }
+
+    .at-tabs__item-underline {
+      width: 80px;
+      height: 4px;
+      background: #229e8e;
+    }
+  }
+
+  .at-tabs-pane {
+    margin-top: 30px;
+  }
+
+  .at-tabs__body {
+    .at-tabs__underline {
+      display: none;
+    }
+  }
+}
+
+.avatar-box_60-60 {
+  position: relative;
+  width: 60px !important;
+  height: 60px;
+  border: 3px solid #434343;
+  border-radius: 14px;
+  box-sizing: border-box;
+
+  &.back-yellow {
+    background: linear-gradient(top, #f12711, #f5af19);
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.card-container {
+  border: none;
+  padding: 0 6px;
+  box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+
+  .at-card__header {
+    border: none;
+
+    .at-card__header-title {
+      @include font-style(28px, #000, bold);
+    }
+
+    .at-card__header-extra {
+      @include font-style(24px, #229e8e);
+    }
+  }
+
+  .at-card__content {
+    padding: 0 20px 20px;
+  }
+}
+
+.circle {
+  @include flex-center();
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  box-shadow: 4px 5px 6px rgba(0, 0, 0, 0.2);
+  background-color: #d5d5d5;
+  background: -moz-linear-gradient(45deg, #d5d5d5, #f9f9f9 30%, #bfbfbf);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(#d5d5d5),
+    color-stop(0.3, #f9f9f9),
+    to(#bfbfbf)
+  );
+  background: -webkit-linear-gradient(45deg, #d5d5d5, #f9f9f9 30%, #bfbfbf);
+  background: -o-linear-gradient(45deg, #d5d5d5, #f9f9f9 30%, #bfbfbf);
+  background: -ms-linear-gradient(45deg, #d5d5d5, #f9f9f9 30%, #bfbfbf);
+  background: linear-gradient(45deg, #d5d5d5, #f9f9f9 30%, #bfbfbf);
+}
+
+//浮动滑块默认样式
+.at-float-layout__container {
+  background-color: initial;
+  min-height: initial;
+}
+
+.at-float-layout {
+  .layout-body,
+  .layout-body__content {
+    padding: 0;
+    min-height: initial;
+  }
+}
+
+
+//列表样式 类似AtList
+.discounts-pay-list {
+  background-color: #fff;
+  position: relative;
+  padding: 0 30px;
+  &::after {
+    content: "";
+    position: absolute;
+    transform-origin: center;
+    box-sizing: border-box;
+    pointer-events: none;
+    left: -50%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+  }
+  .list-item {
+    @include font-style(28px);
+    @include flex-center(column, center, null);
+    box-sizing: border-box;
+    line-height: 1.5;
+    padding: 15px 0;
+    min-height: 90px;
+    border-bottom: 1px solid #e4e4e4;
+    &:last-child {
+      border-bottom: none;
+    }
+    .list-item-content_tips {
+      @include font-style(24px, #e0004e, bold);
+    }
+    .list-item-container {
+      @include flex-center(null, null);
+      width: 100%;
+      .list-item-thumb {
+        margin-right: 10px;
+      }
+      .list-item-content {
+        flex: 1;
+        -webkit-box-flex: 1;
+        overflow: hidden;
+        margin-right: 10px;
+        .list-item-content_title {
+          @include text-overflow();
+          @include font-style(inherit, inherit);
+          @include flex-center(row, null);
+          line-height: 1.5;
+        }
+        .list-item-content_desc {
+          @include font-style(20px, #848484);
+          line-height: 1.5;
+        }
+      }
+      .list-item-extra {
+        max-width: 50%;
+        text-align: right;
+        position: relative;
+      }
+      .list-item-extra_info {
+        @include text-overflow();
+        @include font-style(28px, #848484);
+        max-width: 100%;
+        padding-right: 20px;
+        vertical-align: middle;
+        box-sizing: border-box;
+      }
+      .list-item-extra_icon {
+        right: -10px;
+        top: 50%;
+        transform: translateY(-50%);
+        position: absolute;
+      }
+    }
+  }
+}
+
+
+.footer-pisition {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #434343;
+  height: 100px;
+  border-radius: 10px 10px 0 0;
+  @include font-style(32px, #fdd000);
+  @include flex-center();
+}
+
+.common-button {
+  @include flex-center();
+  position: absolute;
+  bottom: 90px;
+  left: 0;
+  right: 0;
+
+  .at-button {
+    width: 500px;
+    height: 90px;
+    line-height: 90px;
+    border: none;
+    background-color: #434343;
+    @include font-style(28px, #fff, bold);
+  }
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bold {
+  font-weight: bold !important;
+}
+
+.no-bold {
+  font-weight: normal !important;
+}
+
+.color-848484 {
+  color: #848484 !important;
+}
+
+.color-434343 {
+  color: #434343 !important;
+}
+
+.font-20 {
+  font-size: 20px !important;
+}
+
+.font-24 {
+  font-size: 24px !important;
+}
+
+.font-28 {
+  font-size: 28px !important;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.mt-28 {
+  margin-top: 28px !important;
+}
+
+.mt-32 {
+  margin-top: 32px !important;
+}
